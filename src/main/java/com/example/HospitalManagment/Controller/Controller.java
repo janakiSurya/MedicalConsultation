@@ -41,7 +41,7 @@ public class Controller {
 		pc.doctorDetails=doctorDetails;
 		
 		DoctorCategory pc1 = new DoctorCategory();
-		pc1.doctorId=1;
+		pc1.doctorId=2;
 		pc1.duty="patientService";
 		pc1.available_hrs="4PM-9PM";
 		pc1.doctorDetails=doctorDetails;
