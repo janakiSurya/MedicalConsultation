@@ -1,27 +1,58 @@
 package com.example.HospitalManagment.Controller;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import java.util.stream.Collectors; 
+import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.HospitalManagment.Entity.DoctorCategory;
 import com.example.HospitalManagment.Entity.DoctorDetails;
+import com.example.HospitalManagment.Repository.DoctorCategoryRepository;
 
 @RestController
 @CrossOrigin(origins="*")
 public class Controller {
 	
 	
-	@GetMapping("DoctorDetails")
-	public List<DoctorDetails> getDoctors(){
+	@Autowired
+	DoctorCategoryRepository doctorCategorytRepo;
+	
+	
+	@GetMapping("/getDoctorDetails")
+	public List<DoctorCategory> getDoctors(){
 		
-		return Stream.of(new DoctorDetails(11, "Doctor","A","Street1","docA@gmail.com",123456789),
-				new DoctorDetails(12, "Doctor","B","Street2","docB@gmail.com",12345678),
-				new DoctorDetails(13, "Doctor","C","Street3","docC@gmail.com",1234567)).collect(Collectors.toList());
+		DoctorDetails doctorDetails = new DoctorDetails();
+		doctorDetails.doctorId=1;
+		doctorDetails.doctorName="Surya";
+		doctorDetails.age="23";
+		doctorDetails.contactNo="1234567890";
+		
+		
+		DoctorCategory pc = new DoctorCategory();
+		pc.doctorId=1;
+		pc.duty="heart surgeon";
+		pc.available_hrs="9:00AM-2PM";
+		pc.doctorDetails=doctorDetails;
+		
+		DoctorCategory pc1 = new DoctorCategory();
+		pc1.doctorId=1;
+		pc1.duty="patientService";
+		pc1.available_hrs="4PM-9PM";
+		pc1.doctorDetails=doctorDetails;
+		
+		List<DoctorCategory> list = new ArrayList<>();
+		list.add(pc);
+		list.add(pc1);
+		
+		
+		return doctorCategorytRepo.saveAll(list);
+		
 		
 	}
 
