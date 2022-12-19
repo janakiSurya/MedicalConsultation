@@ -1,0 +1,8 @@
+com/backend/controller/SqlController.class
+com/backend/controller/HospitalController.class
+com/backend/entity/UserDetail.class
+com/backend/entity/Patient.class
+com/backend/repo/UserRepo.class
+com/backend/sql/SqlApplication.class
+com/backend/repo/HospitalRepo.class
+com/backend/pojo/UserDetailsResponse.class

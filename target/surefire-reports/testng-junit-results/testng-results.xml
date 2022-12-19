@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-17T12:27:39 IST" name="Surefire suite" finished-at="2022-12-17T12:27:39 IST" duration-ms="678">
+    <groups>
+    </groups>
+    <test started-at="2022-12-17T12:27:39 IST" name="Surefire test" finished-at="2022-12-17T12:27:39 IST" duration-ms="678">
+      <class name="com.backend.sql.HospitalControllerTest">
+        <test-method signature="postpatient()" started-at="2022-12-17T12:27:39 IST" name="postpatient" finished-at="2022-12-17T12:27:39 IST" duration-ms="514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postpatient -->
+        <test-method signature="getAllpatient()" started-at="2022-12-17T12:27:39 IST" name="getAllpatient" finished-at="2022-12-17T12:27:39 IST" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllpatient -->
+        <test-method signature="update()" started-at="2022-12-17T12:27:39 IST" name="update" finished-at="2022-12-17T12:27:39 IST" duration-ms="517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update -->
+        <test-method signature="getOnepatient()" started-at="2022-12-17T12:27:39 IST" name="getOnepatient" finished-at="2022-12-17T12:27:39 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getOnepatient -->
+        <test-method signature="detuser()" started-at="2022-12-17T12:27:39 IST" name="detuser" finished-at="2022-12-17T12:27:39 IST" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- detuser -->
+      </class> <!-- com.backend.sql.HospitalControllerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
